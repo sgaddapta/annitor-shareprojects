@@ -25,7 +25,7 @@ export interface Project {
 export const projectsData: Project[] = [
   {
     id: 1,
-    projectNumber: 1,
+    projectNumber: '017FCAT25',
     province: 'Barcelona',
     municipality: 'Granollers',
     closestSe: 'LA ROCA',
@@ -48,7 +48,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 2,
-    projectNumber: 2,
+    projectNumber: '013FCAT25',
     province: 'Barcelona',
     municipality: 'La Roca del vallés',
     closestSe: 'LA ROCA',
@@ -71,7 +71,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 3,
-    projectNumber: 3,
+    projectNumber: '008FCAT25',
     province: 'Gerona',
     municipality: 'Vilademuns',
     closestSe: 'JUIA',
@@ -94,7 +94,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 4,
-    projectNumber: 4,
+    projectNumber: '022FCAT25',
     province: 'Gerona',
     municipality: 'Holtalric',
     closestSe: 'BUIXALLEU',
@@ -117,7 +117,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 5,
-    projectNumber: 5,
+    projectNumber: '027FCAT25',
     province: 'Barcelona',
     municipality: 'Llinars del valles',
     closestSe: 'LLINARS',
@@ -140,7 +140,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 6,
-    projectNumber: 6,
+    projectNumber: '023FCAT25',
     province: 'Barcelona',
     municipality: 'Puigreig',
     closestSe: 'SALLENT',
@@ -163,7 +163,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 7,
-    projectNumber: 7,
+    projectNumber: '025FCAT25',
     province: 'Barcelona',
     municipality: 'La llacuna',
     closestSe: 'ANOIA',
@@ -186,7 +186,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 8,
-    projectNumber: 8,
+    projectNumber: '031FCAT25',
     province: 'Barcelona',
     municipality: 'Avinyonet del Penedés',
     closestSe: 'MOJA',
@@ -209,7 +209,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 9,
-    projectNumber: 9,
+    projectNumber: '032FCAT25',
     province: 'Barcelona',
     municipality: 'Torrella del Foix',
     closestSe: 'MOJA',
@@ -232,7 +232,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 10,
-    projectNumber: 10,
+    projectNumber: '037FCAT25',
     province: 'Barcelona',
     municipality: 'San frutuos del Bages',
     closestSe: 'MANRESA',
@@ -255,7 +255,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 11,
-    projectNumber: 'NA',
+    projectNumber: '041FCAT25',
     province: 'Girona',
     municipality: 'NA',
     closestSe: 'NA',
@@ -278,7 +278,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 12,
-    projectNumber: 'NA',
+    projectNumber: '038FCAT25',
     province: 'Lleida',
     municipality: 'NA',
     closestSe: 'NA',
@@ -301,7 +301,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 13,
-    projectNumber: 'NA',
+    projectNumber: '046TARA25',
     province: 'Teruel',
     municipality: 'NA',
     closestSe: 'NA',
@@ -324,7 +324,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 14,
-    projectNumber: 'NA',
+    projectNumber: '047TCAT25',
     province: 'Barcelona',
     municipality: 'NA',
     closestSe: 'NA',
@@ -347,7 +347,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 15,
-    projectNumber: 'NA',
+    projectNumber: '050FCAT25',
     province: 'Barcelona',
     municipality: 'NA',
     closestSe: 'NA',
@@ -370,7 +370,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 16,
-    projectNumber: 'NA',
+    projectNumber: '051FCAT25',
     province: 'Barcelona',
     municipality: 'NA',
     closestSe: 'NA',
@@ -393,7 +393,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 17,
-    projectNumber: 'NA',
+    projectNumber: '053TARA25',
     province: 'Zaragoza',
     municipality: 'NA',
     closestSe: 'NA',
@@ -416,7 +416,7 @@ export const projectsData: Project[] = [
   },
   {
     id: 18,
-    projectNumber: 'NA',
+    projectNumber: '054FCAT25',
     province: 'Barcelona',
     municipality: 'NA',
     closestSe: 'NA',
