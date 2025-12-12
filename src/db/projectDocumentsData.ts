@@ -21,8 +21,8 @@ export const projectDocumentsData: ProjectDocument[] = [
   {
     id: 1,
     projectId: 1,
-    thumbnailUrl: '/img/project/01.jpg',
-    documentUrl: '/documents/project-017FCAT25-technical-report.pdf',
+    thumbnailUrl: 'https://storage.googleapis.com/annitor-lista-documentos/017FCAT25/proyecto-granollers.png',
+    documentUrl: 'https://storage.googleapis.com/annitor-lista-documentos/017FCAT25/240717_Proyecto_PFV_GRANOLLERS-1.pdf',
     title: {
       es: 'Informe Técnico del Proyecto',
       en: 'Project Technical Report',
