@@ -30,6 +30,7 @@ import NewsDetails4 from "@/pages/news-details-4";
 import NewsDetails5 from "@/pages/news-details-5";
 import NewsDetails6 from "@/pages/news-details-6";
 import Login from '@/pages/login';
+import ProtectedRoute from '@/components/auth/ProtectedRoute';
 import { createBrowserRouter } from "react-router-dom";
 
 export const router = createBrowserRouter([
@@ -43,7 +44,11 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <HomeThreeSingle />
+                element: (
+                    <ProtectedRoute>
+                        <HomeThreeSingle />
+                    </ProtectedRoute>
+                )
             },
             {
                 path:'/about',
