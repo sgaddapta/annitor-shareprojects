@@ -1,55 +1,7 @@
-import { useEffect, useState } from 'react'
-import { supabase, Project } from '@/lib/supabase'
+import { projectsData } from '@/db/projectsData'
 
 const ProjectsTable = () => {
-  const [projects, setProjects] = useState<Project[]>([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState<string | null>(null)
-
-  useEffect(() => {
-    fetchProjects()
-  }, [])
-
-  const fetchProjects = async () => {
-    try {
-      setLoading(true)
-      const { data, error } = await supabase
-        .from('projects')
-        .select('*')
-        .order('created_at', { ascending: false })
-
-      if (error) throw error
-      setProjects(data || [])
-    } catch (err) {
-      setError(err instanceof Error ? err.message : 'Error al cargar proyectos')
-    } finally {
-      setLoading(false)
-    }
-  }
-
-  if (loading) {
-    return (
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center">
-            <h2>Cargando proyectos...</h2>
-          </div>
-        </div>
-      </section>
-    )
-  }
-
-  if (error) {
-    return (
-      <section className="section-padding">
-        <div className="container">
-          <div className="text-center text-danger">
-            <h3>Error: {error}</h3>
-          </div>
-        </div>
-      </section>
-    )
-  }
+  const projects = projectsData
 
   return (
     <section className="section-padding">
@@ -88,24 +40,24 @@ const ProjectsTable = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {projects.map((project, index) => (
+                  {projects.map((project) => (
                     <tr key={project.id}>
-                      <td>{project.project_number || index + 1}</td>
+                      <td>{project.projectNumber || project.id}</td>
                       <td>{project.province}</td>
                       <td>{project.municipality || '-'}</td>
-                      <td>{project.closest_se || '-'}</td>
-                      <td>{project.pv_power?.toFixed(2) || '-'}</td>
-                      <td>{project.bess_power?.toFixed(2) || '-'}</td>
-                      <td>{project.peak_power?.toFixed(2) || '-'}</td>
-                      <td>{project.access_capacity?.toFixed(2) || '-'}</td>
+                      <td>{project.closestSe || '-'}</td>
+                      <td>{project.pvPower?.toFixed(2) || '-'}</td>
+                      <td>{project.bessPower?.toFixed(2) || '-'}</td>
+                      <td>{project.peakPower?.toFixed(2) || '-'}</td>
+                      <td>{project.accessCapacity?.toFixed(2) || '-'}</td>
                       <td>{project.technology || '-'}</td>
                       <td>{project.production?.toLocaleString() || '-'}</td>
-                      <td>{project.usable_surface?.toFixed(2) || '-'}</td>
-                      <td>{project.renting_price?.toLocaleString() || '-'}</td>
-                      <td>{project.land_contract_status || '-'}</td>
-                      <td>{project.administrative_status || '-'}</td>
-                      <td>{project.rtb_estimation || '-'}</td>
-                      <td>{project.cod_estimation || '-'}</td>
+                      <td>{project.usableSurface?.toFixed(2) || '-'}</td>
+                      <td>{project.rentingPrice?.toLocaleString() || '-'}</td>
+                      <td>{project.landContractStatus || '-'}</td>
+                      <td>{project.administrativeStatus || '-'}</td>
+                      <td>{project.rtbEstimation || '-'}</td>
+                      <td>{project.codEstimation || '-'}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -122,16 +74,16 @@ const ProjectsTable = () => {
                 <p className="mb-1">
                   <strong>Total Potencia PV:</strong>{' '}
                   {projects
-                    .filter(p => p.pv_power)
-                    .reduce((sum, p) => sum + (p.pv_power || 0), 0)
+                    .filter(p => p.pvPower)
+                    .reduce((sum, p) => sum + (p.pvPower || 0), 0)
                     .toFixed(2)}{' '}
                   MW
                 </p>
                 <p className="mb-0">
                   <strong>Total Potencia BESS:</strong>{' '}
                   {projects
-                    .filter(p => p.bess_power)
-                    .reduce((sum, p) => sum + (p.bess_power || 0), 0)
+                    .filter(p => p.bessPower)
+                    .reduce((sum, p) => sum + (p.bessPower || 0), 0)
                     .toFixed(2)}{' '}
                   MWh
                 </p>
@@ -145,16 +97,16 @@ const ProjectsTable = () => {
                 <p className="mb-1">
                   <strong>Total Potencia Pico:</strong>{' '}
                   {projects
-                    .filter(p => p.peak_power)
-                    .reduce((sum, p) => sum + (p.peak_power || 0), 0)
+                    .filter(p => p.peakPower)
+                    .reduce((sum, p) => sum + (p.peakPower || 0), 0)
                     .toFixed(2)}{' '}
                   MW
                 </p>
                 <p className="mb-0">
                   <strong>Total Capacidad Acceso:</strong>{' '}
                   {projects
-                    .filter(p => p.access_capacity)
-                    .reduce((sum, p) => sum + (p.access_capacity || 0), 0)
+                    .filter(p => p.accessCapacity)
+                    .reduce((sum, p) => sum + (p.accessCapacity || 0), 0)
                     .toFixed(2)}{' '}
                   MW
                 </p>
