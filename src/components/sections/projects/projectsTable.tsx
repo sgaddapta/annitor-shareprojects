@@ -1,7 +1,11 @@
 import { projectsData } from '@/db/projectsData'
+import { projectsTableI18nData } from '@/db/i18n/projectsTableData'
+import { useLanguage } from '@/hooks/useLanguage'
 
 const ProjectsTable = () => {
   const projects = projectsData
+  const { currentLanguage } = useLanguage()
+  const tData = projectsTableI18nData
 
   return (
     <section className="section-padding">
@@ -9,8 +13,8 @@ const ProjectsTable = () => {
         <div className="row mb-40">
           <div className="col-12">
             <div className="section-title text-center">
-              <h2>Lista de Proyectos</h2>
-              <p>Total de proyectos: {projects.length}</p>
+              <h2>{tData.pageTitle[currentLanguage]}</h2>
+              <p>{tData.totalProjects[currentLanguage]}: {projects.length}</p>
             </div>
           </div>
         </div>
@@ -21,21 +25,21 @@ const ProjectsTable = () => {
               <table className="table table-striped table-hover">
                 <thead className="table-dark">
                   <tr>
-                    <th>N°</th>
-                    <th>Provincia</th>
-                    <th>Municipio</th>
-                    <th>SE Más Cercana</th>
-                    <th>Potencia PV (MW)</th>
-                    <th>Potencia BESS (MWh)</th>
-                    <th>Potencia Pico (MW)</th>
-                    <th>Capacidad Acceso (MW)</th>
-                    <th>Tecnología</th>
-                    <th>Producción (KWh)</th>
-                    <th>Superficie (Ha)</th>
-                    <th>Precio Alquiler (€/Ha/año)</th>
-                    <th>Project Status</th>
-                    <th>Estimación RTB</th>
-                    <th>Estimación COD</th>
+                    <th>{tData.headers.number[currentLanguage]}</th>
+                    <th>{tData.headers.province[currentLanguage]}</th>
+                    <th>{tData.headers.municipality[currentLanguage]}</th>
+                    <th>{tData.headers.closestSe[currentLanguage]}</th>
+                    <th>{tData.headers.pvPower[currentLanguage]}</th>
+                    <th>{tData.headers.bessPower[currentLanguage]}</th>
+                    <th>{tData.headers.peakPower[currentLanguage]}</th>
+                    <th>{tData.headers.accessCapacity[currentLanguage]}</th>
+                    <th>{tData.headers.technology[currentLanguage]}</th>
+                    <th>{tData.headers.production[currentLanguage]}</th>
+                    <th>{tData.headers.surface[currentLanguage]}</th>
+                    <th>{tData.headers.rentingPrice[currentLanguage]}</th>
+                    <th>{tData.headers.projectStatus[currentLanguage]}</th>
+                    <th>{tData.headers.rtbEstimation[currentLanguage]}</th>
+                    <th>{tData.headers.codEstimation[currentLanguage]}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -68,9 +72,9 @@ const ProjectsTable = () => {
           <div className="col-md-6">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">Totales PV+BESS Cataluña</h5>
+                <h5 className="card-title">{tData.totals.pvBessCatalunaTitle[currentLanguage]}</h5>
                 <p className="mb-1">
-                  <strong>Total Potencia PV:</strong>{' '}
+                  <strong>{tData.totals.totalPvPower[currentLanguage]}:</strong>{' '}
                   {projects
                     .filter(p => typeof p.pvPower === 'number')
                     .reduce((sum, p) => sum + (p.pvPower as number), 0)
@@ -78,7 +82,7 @@ const ProjectsTable = () => {
                   MW
                 </p>
                 <p className="mb-0">
-                  <strong>Total Potencia BESS:</strong>{' '}
+                  <strong>{tData.totals.totalBessPower[currentLanguage]}:</strong>{' '}
                   {projects
                     .filter(p => typeof p.bessPower === 'number')
                     .reduce((sum, p) => sum + (p.bessPower as number), 0)
@@ -91,9 +95,9 @@ const ProjectsTable = () => {
           <div className="col-md-6">
             <div className="card">
               <div className="card-body">
-                <h5 className="card-title">Totales Proyectos Disponibles</h5>
+                <h5 className="card-title">{tData.totals.availableProjectsTitle[currentLanguage]}</h5>
                 <p className="mb-1">
-                  <strong>Total Potencia Pico:</strong>{' '}
+                  <strong>{tData.totals.totalPeakPower[currentLanguage]}:</strong>{' '}
                   {projects
                     .filter(p => typeof p.peakPower === 'number')
                     .reduce((sum, p) => sum + (p.peakPower as number), 0)
@@ -101,7 +105,7 @@ const ProjectsTable = () => {
                   MW
                 </p>
                 <p className="mb-0">
-                  <strong>Total Capacidad Acceso:</strong>{' '}
+                  <strong>{tData.totals.totalAccessCapacity[currentLanguage]}:</strong>{' '}
                   {projects
                     .filter(p => typeof p.accessCapacity === 'number')
                     .reduce((sum, p) => sum + (p.accessCapacity as number), 0)
