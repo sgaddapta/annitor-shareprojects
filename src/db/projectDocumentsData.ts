@@ -36,6 +36,23 @@ export const projectDocumentsData: ProjectDocument[] = [
     }
   },
   {
+    id: 11,
+    projectId: 1,
+    thumbnailUrl: 'https://storage.googleapis.com/annitor-lista-documentos/017FCAT25/Cronologia-granollers.png',
+    documentUrl: 'https://storage.googleapis.com/annitor-lista-documentos/017FCAT25/240717_Proyecto_PFV_GRANOLLERS-Cronologia.pdf',
+    title: {
+      es: 'Cronología del proyecto',
+      en: 'Project timeline',
+      fr: 'Chronologie du projet',
+      it: 'Cronologia del progetto'
+    },
+    description: {
+      es: 'El cronograma del proyecto fotovoltaico Granollers-1 (4 MW) detalla la secuencia de trabajos desde la preparación del terreno hasta la puesta en marcha final. Las tareas iniciales incluyen el acondicionamiento del terreno, la construcción de viales y la ejecución de zanjas y canalizaciones. Paralelamente se reciben paneles, seguidores, inversores, centros de transformación y sistemas de almacenamiento. La fase de montaje abarca la instalación de seguidores, paneles, cableado en CC y CA, inversores, centros de transformación y baterías. Posteriormente se instalan los sistemas de control, vigilancia e iluminación. Finalmente, se realizan las pruebas de funcionamiento y se ejecuta la puesta en marcha, completando el proyecto según la planificación semanal establecida.',
+      en: 'The schedule for the Granollers-1 (4 MW) photovoltaic project outlines the full sequence of activities from land preparation to final commissioning. Initial tasks include site clearing, construction of access roads, and excavation of trenches and cable routes. In parallel, photovoltaic panels, trackers, inverters, transformer stations, and battery storage systems are delivered. The installation phase covers the assembly of trackers, panel mounting, DC and AC cabling, inverter integration, transformer station installation, and setup of storage units. This is followed by the installation of control, monitoring, lighting, and security systems. The project concludes with functional testing and final commissioning according to the defined week-by-week timeline.',
+      fr: 'Le planning du projet photovoltaïque Granollers-1 (4 MW) présente la séquence complète des travaux, depuis la préparation du terrain jusqu’à la mise en service finale. Les premières étapes comprennent le débroussaillage, la construction des voies d’accès et l’excavation des tranchées pour les câbles. Parallèlement, les panneaux photovoltaïques, les suiveurs, les onduleurs, les centres de transformation et les systèmes de stockage sont livrés. La phase de montage inclut l’installation des suiveurs, la pose des panneaux, le câblage en CC et en CA, l’intégration des onduleurs, la mise en place des centres de transformation et l’installation des batteries. Ensuite, les systèmes de contrôle, de surveillance et d’éclairage sont installés. Le projet se termine par les essais de fonctionnement puis la mise en service, selon le calendrier hebdomadaire défini.'
+    }
+  },
+  {
     id: 2,
     projectId: 2,
     thumbnailUrl: '/img/project/02.jpg',
