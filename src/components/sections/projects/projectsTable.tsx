@@ -33,8 +33,7 @@ const ProjectsTable = () => {
                     <th>Producción (KWh)</th>
                     <th>Superficie (Ha)</th>
                     <th>Precio Alquiler (€/Ha/año)</th>
-                    <th>Estado Contrato</th>
-                    <th>Estado Administrativo</th>
+                    <th>Project Status</th>
                     <th>Estimación RTB</th>
                     <th>Estimación COD</th>
                   </tr>
@@ -54,8 +53,7 @@ const ProjectsTable = () => {
                       <td>{typeof project.production === 'number' ? project.production.toLocaleString() : '-'}</td>
                       <td>{typeof project.usableSurface === 'number' ? project.usableSurface.toFixed(2) : '-'}</td>
                       <td>{typeof project.rentingPrice === 'number' ? project.rentingPrice.toLocaleString() : '-'}</td>
-                      <td>{project.landContractStatus === 'NA' ? '-' : project.landContractStatus}</td>
-                      <td>{project.administrativeStatus === 'NA' ? '-' : project.administrativeStatus}</td>
+                      <td>{project.projectStatus === 'NA' ? '-' : project.projectStatus}</td>
                       <td>{project.rtbEstimation === 'NA' ? '-' : project.rtbEstimation}</td>
                       <td>{project.codEstimation === 'NA' ? '-' : project.codEstimation}</td>
                     </tr>
