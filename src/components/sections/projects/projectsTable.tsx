@@ -57,7 +57,26 @@ const ProjectsTable = () => {
                       onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f8f9fa'}
                       onMouseOut={(e) => e.currentTarget.style.backgroundColor = ''}
                     >
-                      <td>{project.projectNumber === 'NA' ? '-' : project.projectNumber}</td>
+                      <td>
+                        {project.projectNumber === 'NA' ? (
+                          '-'
+                        ) : (
+                          <a
+                            href={`/project-documentation/${project.id}`}
+                            onClick={(e) => {
+                              e.stopPropagation()
+                              navigate(`/project-documentation/${project.id}`)
+                            }}
+                            style={{
+                              color: '#007bff',
+                              textDecoration: 'underline',
+                              fontWeight: 'bold'
+                            }}
+                          >
+                            {project.projectNumber}
+                          </a>
+                        )}
+                      </td>
                       <td>{project.province}</td>
                       <td>{project.municipality === 'NA' ? '-' : project.municipality}</td>
                       <td>{project.closestSe === 'NA' ? '-' : project.closestSe}</td>
