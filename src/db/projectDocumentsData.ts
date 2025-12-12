@@ -58,10 +58,10 @@ export const projectDocumentsData: ProjectDocument[] = [
     thumbnailUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/proyecto-vilademuls.png',
     documentUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/241030_Proyecto%20PFV%20VILADEMULS-1.pdf',
     title: {
-      es: 'Cronología del proyecto',
-      en: 'Project timeline',
-      fr: 'Chronologie du projet',
-      it: 'Cronologia del progetto'
+      es: 'Informe Técnico del Proyecto',
+      en: 'Project Technical Report',
+      fr: 'Rapport Technique du Projet',
+      it: 'Relazione Tecnica del Progetto'
     },
     description: {
       es: 'El proyecto VILADEMULS-1 describe una planta solar fotovoltaica de 3,2 MW en Vilademuls (Girona), instalada sobre 7,57 ha dentro de un terreno total de 18,37 ha, empleando 6.104 módulos bifaciales de 660 Wp montados en seguidores a un eje y conectados a 28 inversores. La instalación inyectará la energía en una línea de 25 kV próxima a la parcela y contará con cuatro centros de transformación y un sistema de almacenamiento LFP de 3.000 kW / 6.420 kWh. El documento detalla la radiación solar disponible, el dimensionado del campo generador, los accesos, la obra civil, el cableado, protecciones eléctricas, la puesta a tierra y la normativa aplicable. También incluye estudios de producción, cronograma, análisis estructural y de viabilidad, definiendo todos los elementos necesarios para la construcción, conexión, operación y seguridad de la planta.',
@@ -82,46 +82,10 @@ export const projectDocumentsData: ProjectDocument[] = [
       it: 'Relazione Tecnica del Progetto'
     },
     description: {
-      es: 'Especificaciones técnicas y análisis de viabilidad del proyecto',
-      en: 'Technical specifications and project feasibility analysis',
-      fr: 'Spécifications techniques et analyse de faisabilité du projet',
-      it: 'Specifiche tecniche e analisi di fattibilità del progetto'
-    }
-  },
-  {
-    id: 4,
-    projectId: 4,
-    thumbnailUrl: '/img/project/04.jpg',
-    documentUrl: '/documents/project-012FCAT25-technical-report.pdf',
-    title: {
-      es: 'Informe Técnico del Proyecto',
-      en: 'Project Technical Report',
-      fr: 'Rapport Technique du Projet',
-      it: 'Relazione Tecnica del Progetto'
-    },
-    description: {
-      es: 'Documentación completa del proyecto fotovoltaico',
-      en: 'Complete photovoltaic project documentation',
-      fr: 'Documentation complète du projet photovoltaïque',
-      it: 'Documentazione completa del progetto fotovoltaico'
-    }
-  },
-  {
-    id: 5,
-    projectId: 5,
-    thumbnailUrl: '/img/project/05.jpg',
-    documentUrl: '/documents/project-021FCAT25-technical-report.pdf',
-    title: {
-      es: 'Informe Técnico del Proyecto',
-      en: 'Project Technical Report',
-      fr: 'Rapport Technique du Projet',
-      it: 'Relazione Tecnica del Progetto'
-    },
-    description: {
-      es: 'Informe técnico y estudios de impacto ambiental',
-      en: 'Technical report and environmental impact studies',
-      fr: 'Rapport technique et études d\'impact environnemental',
-      it: 'Relazione tecnica e studi di impatto ambientale'
+      es: 'El cronograma del proyecto fotovoltaico Vilademuls-1 detalla las fases de ejecución desde las primeras obras de preparación del terreno hasta la puesta en marcha final. Las actividades iniciales incluyen el desbroce, la adecuación del terreno, la construcción de viales y la ejecución de zanjas y canalizaciones, seguidas del cerramiento perimetral. En paralelo se programan los suministros de paneles, seguidores, inversores, centros de transformación y sistemas de almacenamiento. La fase de montaje abarca la instalación de seguidores, paneles, cableado en CC y CA, inversores, centros de transformación y equipos de almacenamiento. Posteriormente se instalan los sistemas de control, vigilancia e iluminación. El proyecto culmina con las pruebas de funcionamiento y la puesta en marcha, siguiendo una planificación semanal estructurada.',
+      en: 'TThe project schedule for the Vilademuls-1 (3.2 MW) photovoltaic plant outlines the full sequence of works from initial land preparation to final commissioning. Early activities include clearing and grading the terrain, building access roads, and executing trenches and cable routes, followed by installation of the perimeter fence. In parallel, the delivery of panels, trackers, inverters, transformer stations, and battery storage systems is planned. The installation phase covers mounting the trackers and panels, DC and AC cabling, inverter integration, transformer station assembly, and installation of storage units. Subsequent steps include installing control, monitoring, and lighting systems. The project concludes with functional testing and final commissioning according to the structured week-by-week timeline.',
+      fr: 'Le calendrier du projet photovoltaïque Vilademuls-1 (3,2 MW) présente l’ensemble des étapes, depuis la préparation initiale du terrain jusqu’à la mise en service finale. Les premières activités incluent le débroussaillage, le nivellement du terrain, la construction des voies d’accès et l’excavation des tranchées, suivis de l’installation du clôture périmétrique. Parallèlement s’organisent les livraisons de panneaux, suiveurs, onduleurs, centres de transformation et systèmes de stockage. La phase de montage comprend l’installation des suiveurs et des panneaux, le câblage en CC et en CA, l’intégration des onduleurs, l’assemblage des centres de transformation et la mise en place des unités de stockage. Les systèmes de contrôle, de surveillance et d’éclairage sont ensuite installés. Le projet s’achève par les essais de fonctionnement puis la mise en service, conformément au planning hebdomadaire structuré.',
+      it: 'Il cronoprogramma del progetto fotovoltaico Vilademuls-1 (3,2 MW) descrive tutte le fasi dei lavori, dalla preparazione iniziale del terreno fino alla messa in servizio finale. Le prime attività includono la pulizia e livellazione del suolo, la costruzione delle strade di accesso e lo scavo delle trincee, seguiti dall’installazione della recinzione perimetrale. Parallelamente sono previste le consegne di pannelli, inseguitori, inverter, centri di trasformazione e sistemi di accumulo. La fase di montaggio comprende l’installazione degli inseguitori e dei pannelli, il cablaggio CC e CA, l’integrazione degli inverter, l’assemblaggio dei centri di trasformazione e il posizionamento delle unità di accumulo. Successivamente vengono installati i sistemi di controllo, sorveglianza e illuminazione. Il progetto si conclude con le prove di funzionamento e la messa in servizio, seguendo un calendario settimanale strutturato.'
     }
   }
 ]
