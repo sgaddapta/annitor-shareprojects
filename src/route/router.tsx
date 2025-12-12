@@ -13,6 +13,7 @@ import Project from "@/pages/project";
 import ProjectCarousel from "@/pages/project-carousel";
 import ProjectDetails from "@/pages/project-details";
 import ProjectDetailsOne from "@/pages/project-details-1";
+import ProjectDocumentation from "@/pages/project-documentation";
 import Service from "@/pages/service";
 import ServiceCarousel from "@/pages/service-carousel";
 import ServiceDetails from "@/pages/service-details";
@@ -89,6 +90,14 @@ export const router = createBrowserRouter([
             {
                 path:'/project-details-1',
                 element:<ProjectDetailsOne/>
+            },
+            {
+                path:'/project-documentation/:projectId',
+                element: (
+                    <ProtectedRoute>
+                        <ProjectDocumentation/>
+                    </ProtectedRoute>
+                )
             },
             {
                 path:'/team',

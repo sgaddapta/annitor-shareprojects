@@ -1,11 +1,17 @@
 import { projectsData } from '@/db/projectsData'
 import { projectsTableI18nData } from '@/db/i18n/projectsTableData'
 import { useLanguage } from '@/hooks/useLanguage'
+import { useNavigate } from 'react-router-dom'
 
 const ProjectsTable = () => {
   const projects = projectsData
   const { currentLanguage } = useLanguage()
   const tData = projectsTableI18nData
+  const navigate = useNavigate()
+
+  const handleRowClick = (projectId: number) => {
+    navigate(`/project-documentation/${projectId}`)
+  }
 
   return (
     <section className="section-padding">
@@ -44,7 +50,13 @@ const ProjectsTable = () => {
                 </thead>
                 <tbody>
                   {projects.map((project) => (
-                    <tr key={project.id}>
+                    <tr
+                      key={project.id}
+                      onClick={() => handleRowClick(project.id)}
+                      style={{ cursor: 'pointer' }}
+                      onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#f8f9fa'}
+                      onMouseOut={(e) => e.currentTarget.style.backgroundColor = ''}
+                    >
                       <td>{project.projectNumber === 'NA' ? '-' : project.projectNumber}</td>
                       <td>{project.province}</td>
                       <td>{project.municipality === 'NA' ? '-' : project.municipality}</td>
