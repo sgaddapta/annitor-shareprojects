@@ -27,7 +27,7 @@ export const projectsData: Project[] = [
     id: 1,
     projectNumber: 1,
     province: 'Barcelona',
-    municipality: 'NA',
+    municipality: 'Granollers',
     closestSe: 'LA ROCA',
     seAvailablePower: 138.1,
     mvlSeDistance: 30,
