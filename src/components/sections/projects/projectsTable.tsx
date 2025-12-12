@@ -42,22 +42,22 @@ const ProjectsTable = () => {
                 <tbody>
                   {projects.map((project) => (
                     <tr key={project.id}>
-                      <td>{project.projectNumber || project.id}</td>
+                      <td>{project.projectNumber === 'NA' ? '-' : project.projectNumber}</td>
                       <td>{project.province}</td>
-                      <td>{project.municipality || '-'}</td>
-                      <td>{project.closestSe || '-'}</td>
-                      <td>{project.pvPower?.toFixed(2) || '-'}</td>
-                      <td>{project.bessPower?.toFixed(2) || '-'}</td>
-                      <td>{project.peakPower?.toFixed(2) || '-'}</td>
-                      <td>{project.accessCapacity?.toFixed(2) || '-'}</td>
-                      <td>{project.technology || '-'}</td>
-                      <td>{project.production?.toLocaleString() || '-'}</td>
-                      <td>{project.usableSurface?.toFixed(2) || '-'}</td>
-                      <td>{project.rentingPrice?.toLocaleString() || '-'}</td>
-                      <td>{project.landContractStatus || '-'}</td>
-                      <td>{project.administrativeStatus || '-'}</td>
-                      <td>{project.rtbEstimation || '-'}</td>
-                      <td>{project.codEstimation || '-'}</td>
+                      <td>{project.municipality === 'NA' ? '-' : project.municipality}</td>
+                      <td>{project.closestSe === 'NA' ? '-' : project.closestSe}</td>
+                      <td>{typeof project.pvPower === 'number' ? project.pvPower.toFixed(2) : '-'}</td>
+                      <td>{typeof project.bessPower === 'number' ? project.bessPower.toFixed(2) : '-'}</td>
+                      <td>{typeof project.peakPower === 'number' ? project.peakPower.toFixed(2) : '-'}</td>
+                      <td>{typeof project.accessCapacity === 'number' ? project.accessCapacity.toFixed(2) : '-'}</td>
+                      <td>{project.technology === 'NA' ? '-' : project.technology}</td>
+                      <td>{typeof project.production === 'number' ? project.production.toLocaleString() : '-'}</td>
+                      <td>{typeof project.usableSurface === 'number' ? project.usableSurface.toFixed(2) : '-'}</td>
+                      <td>{typeof project.rentingPrice === 'number' ? project.rentingPrice.toLocaleString() : '-'}</td>
+                      <td>{project.landContractStatus === 'NA' ? '-' : project.landContractStatus}</td>
+                      <td>{project.administrativeStatus === 'NA' ? '-' : project.administrativeStatus}</td>
+                      <td>{project.rtbEstimation === 'NA' ? '-' : project.rtbEstimation}</td>
+                      <td>{project.codEstimation === 'NA' ? '-' : project.codEstimation}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -74,16 +74,16 @@ const ProjectsTable = () => {
                 <p className="mb-1">
                   <strong>Total Potencia PV:</strong>{' '}
                   {projects
-                    .filter(p => p.pvPower)
-                    .reduce((sum, p) => sum + (p.pvPower || 0), 0)
+                    .filter(p => typeof p.pvPower === 'number')
+                    .reduce((sum, p) => sum + (p.pvPower as number), 0)
                     .toFixed(2)}{' '}
                   MW
                 </p>
                 <p className="mb-0">
                   <strong>Total Potencia BESS:</strong>{' '}
                   {projects
-                    .filter(p => p.bessPower)
-                    .reduce((sum, p) => sum + (p.bessPower || 0), 0)
+                    .filter(p => typeof p.bessPower === 'number')
+                    .reduce((sum, p) => sum + (p.bessPower as number), 0)
                     .toFixed(2)}{' '}
                   MWh
                 </p>
@@ -97,16 +97,16 @@ const ProjectsTable = () => {
                 <p className="mb-1">
                   <strong>Total Potencia Pico:</strong>{' '}
                   {projects
-                    .filter(p => p.peakPower)
-                    .reduce((sum, p) => sum + (p.peakPower || 0), 0)
+                    .filter(p => typeof p.peakPower === 'number')
+                    .reduce((sum, p) => sum + (p.peakPower as number), 0)
                     .toFixed(2)}{' '}
                   MW
                 </p>
                 <p className="mb-0">
                   <strong>Total Capacidad Acceso:</strong>{' '}
                   {projects
-                    .filter(p => p.accessCapacity)
-                    .reduce((sum, p) => sum + (p.accessCapacity || 0), 0)
+                    .filter(p => typeof p.accessCapacity === 'number')
+                    .reduce((sum, p) => sum + (p.accessCapacity as number), 0)
                     .toFixed(2)}{' '}
                   MW
                 </p>
