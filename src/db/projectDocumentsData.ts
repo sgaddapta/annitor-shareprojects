@@ -58,10 +58,10 @@ export const projectDocumentsData: ProjectDocument[] = [
     thumbnailUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/proyecto-vilademuls.png',
     documentUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/241030_Proyecto%20PFV%20VILADEMULS-1.pdf',
     title: {
-      es: 'Informe Técnico del Proyecto',
-      en: 'Project Technical Report',
-      fr: 'Rapport Technique du Projet',
-      it: 'Relazione Tecnica del Progetto'
+      es: 'Cronología del proyecto',
+      en: 'Project timeline',
+      fr: 'Chronologie du projet',
+      it: 'Cronologia del progetto'
     },
     description: {
       es: 'Documentación técnica detallada del proyecto de energía renovable',
@@ -73,8 +73,8 @@ export const projectDocumentsData: ProjectDocument[] = [
   {
     id: 31,
     projectId: 3,
-    thumbnailUrl: '/img/project/03.jpg',
-    documentUrl: '/documents/project-011FCAT25-technical-report.pdf',
+    thumbnailUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/Cronograma-Vilademuls.png',
+    documentUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/241030_Proyecto%20PFV%20VILADEMULS-Cronologia.pdf',
     title: {
       es: 'Informe Técnico del Proyecto',
       en: 'Project Technical Report',
