@@ -53,10 +53,10 @@ export const projectDocumentsData: ProjectDocument[] = [
     }
   },
   {
-    id: 2,
-    projectId: 2,
-    thumbnailUrl: '/img/project/02.jpg',
-    documentUrl: '/documents/project-013FCAT25-technical-report.pdf',
+    id: 3,
+    projectId: 3,
+    thumbnailUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/proyecto-vilademuls.png',
+    documentUrl: 'https://storage.googleapis.com/annitor-lista-documentos/008FCAT25/241030_Proyecto%20PFV%20VILADEMULS-1.pdf',
     title: {
       es: 'Informe Técnico del Proyecto',
       en: 'Project Technical Report',
@@ -71,7 +71,7 @@ export const projectDocumentsData: ProjectDocument[] = [
     }
   },
   {
-    id: 3,
+    id: 31,
     projectId: 3,
     thumbnailUrl: '/img/project/03.jpg',
     documentUrl: '/documents/project-011FCAT25-technical-report.pdf',
